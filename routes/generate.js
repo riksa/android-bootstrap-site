@@ -182,7 +182,7 @@ String.prototype.endsWith = function(suffix) {
 function generateFile(file, packageName, appName, callback) {
 
   var stats = fs.lstatSync(file);
-  if(!stats.isDirectory() && !file.endsWith(".png")) { 
+  if(!stats.isDirectory() && !file.endsWith(".png") && !file.endsWith(".jar")) { 
     // Only work with text files, no directories or png files.  
     // Above == terrible code, but for android-bootstrap, it works. Pragmatic & KISS. FTW.
     
